@@ -93,3 +93,12 @@ int iocla_printf(const char *format, ...)
 	va_end(args);
 	return bytes_written;
 }
+
+int main() {
+	iocla_printf("%d\t", 100);
+	iocla_printf("%s  ", "AnaAreMere");
+	iocla_printf("alabala\n");
+	iocla_printf("%u, %c %x\n", 3, 65, 123);
+	iocla_printf("Ana are %d mere si \t%%Hex@na%% are 0x%x mere\n", 5, 16);
+	return 0;
+}
