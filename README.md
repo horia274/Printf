@@ -7,6 +7,13 @@ Pentru a realiza acest lucru am folosit un wrapper peste functia **write** (writ
 pentru a putea afisa la *stdout*. Mai multe detalii despre enunt se pot gasi [aici](https://ocw.cs.pub.ro/courses/iocla/teme/tema-1).
 
 
+## Mod de utilizare
+
+In fisierul **main**, se scrie orice comanda de tipul *iocla_printf("%...", ...)* (ca si
+cum s-ar apela un printf normal).
+Se ruleaza comanda **make** in terminal pentru a compila si a rula executabilul.
+
+
 ## Explicatii privind codul
 
 ### Functia "convert"
