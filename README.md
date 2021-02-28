@@ -2,10 +2,14 @@
 
 ## Scop
 
-Programul simuleaza apelul functiei **printf** 
+Programul simuleaza apelul functiei **printf**, functie prezenta in biblioteca **stdio**.
+Pentru a realiza acest lucru am folosit un wrapper peste functia **write** (write_stdout)
+pentru a putea afisa la *stdout*. Mai multe detalii despre enunt se pot gasi [aici](https://ocw.cs.pub.ro/courses/iocla/teme/tema-1).
 
-		
-## Functia "convert"
+
+## Explicatii privind codul
+
+### Functia "convert"
 	
 Convertesc numarul "number" din baza 10, in baza "base" (orice baza de la 2 la 16),
 pastrand rezultat in string-ul convert_number. "Count" da dimensiunea acestui
@@ -14,7 +18,7 @@ string si implicit numarul de cifre din baza "base". Pozitia 0, a acestui string
 negative. "Alph" va fi declarat in "iocla_printf" si contine toate cifele din baza 16.
 
 
-## Functia "iocla_printf"
+### Functia "iocla_printf"
 		
 Pornesc cu variabila "bytes_written" initializata cu 0, la care voi adauga return-ul
 functiei "write_stdout" la fiecare apel. Aceasta variabila ca fi returnata ulterior.
@@ -24,7 +28,7 @@ Daca nu, ma uit la urmatorul caracter din "format" si disting niste cazuri. Pe m
 ce gasesc cate un specificator, ma uit la urmatorul argument din lista de argumente
 data ca parametru.
 
-Cazurile sunt (pentru urmatorul caracter de dupa '%'):
+### Descriptorii folositi (caracterul de dupa '%')
 
 * d - in caz ca numarul este negativ, apelez "convert" pentru opusul acelui
 numar si ii pastrez semnul, altfel apelez direct "convert"; in ambele situatii,
